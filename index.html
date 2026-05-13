@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GrammarLift | Language Quiz Studio</title>
+    <title>GrammarLift | English Learning Toy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,10 +17,11 @@
 
     <main class="app-shell">
       <section class="hero">
-        <p class="kicker">Language Mastery Lab</p>
-        <h1>Sharpen Your English With Focused Grammar Quizzes</h1>
+        <p class="kicker">🎓 Language Learning Lab</p>
+        <h1>Sharpen Your English Grammar & Vocabulary</h1>
         <p class="hero-copy">
           Choose a category, solve mixed question types, and track your score instantly.
+          Practice grammar, collocations, phrasal verbs, synonyms, and expand your vocabulary!
           Every quiz includes single-choice, multiple-choice, true/false, and drag-and-drop challenges.
         </p>
       </section>
@@ -28,7 +29,7 @@
       <section class="panel category-panel" id="category-panel">
         <div class="panel-title-wrap">
           <h2>Choose Your Quiz Category</h2>
-          <p>Each category has 10 questions.</p>
+          <p>Each category has 25+ questions to help you master the language.</p>
         </div>
         <div class="category-grid" id="category-grid"></div>
       </section>
@@ -36,11 +37,11 @@
       <section class="panel quiz-panel hidden" id="quiz-panel">
         <div class="quiz-header">
           <h2 id="quiz-title">Quiz</h2>
-          <button id="change-category" class="ghost-btn" type="button">Change Category</button>
+          <button id="change-category" class="ghost-btn" type="button">← Change Category</button>
         </div>
 
         <div class="progress-wrap">
-          <p id="progress-text">Question 1 of 10</p>
+          <p id="progress-text">Question 1 of 25</p>
           <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="10">
             <div class="progress-fill" id="progress-fill"></div>
           </div>
@@ -53,21 +54,22 @@
         </article>
 
         <div class="quiz-actions">
-          <button id="prev-btn" type="button" class="ghost-btn">Previous</button>
-          <button id="next-btn" type="button" class="primary-btn">Next</button>
-          <button id="submit-btn" type="button" class="success-btn hidden">Submit Quiz</button>
+          <button id="prev-btn" type="button" class="ghost-btn">⬅ Previous</button>
+          <button id="next-btn" type="button" class="primary-btn">Next ➡</button>
+          <button id="submit-btn" type="button" class="success-btn hidden">🎉 Submit Quiz</button>
         </div>
       </section>
     </main>
 
     <div class="modal hidden" id="result-modal" role="dialog" aria-modal="true" aria-labelledby="result-heading">
       <div class="modal-card" id="modal-card">
-        <h2 id="result-heading">Quiz Result</h2>
+        <h2 id="result-heading">🏆 Quiz Complete!</h2>
         <p class="score-line" id="score-line"></p>
         <p id="score-feedback"></p>
         <div class="modal-actions">
-          <button id="retry-btn" type="button" class="primary-btn">Retry Category</button>
-          <button id="new-category-btn" type="button" class="ghost-btn">Pick New Category</button>
+          <button id="review-btn" type="button" class="secondary-btn hidden">📝 Review Answers</button>
+          <button id="retry-btn" type="button" class="primary-btn">🔄 Retry Category</button>
+          <button id="new-category-btn" type="button" class="ghost-btn">📚 Pick New Category</button>
         </div>
       </div>
     </div>
