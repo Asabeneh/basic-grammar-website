@@ -68,6 +68,62 @@ h3 {
   gap: 22px;
 }
 
+footer {
+  width: min(980px, 92vw);
+  margin: 0 auto 36px;
+  padding: 16px 20px;
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(6px);
+  box-shadow: var(--shadow);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer small {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+footer a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+footer > div:nth-child(2) {
+  display: inline-flex;
+  gap: 14px;
+  align-items: center;
+}
+
+footer > div:nth-child(2) a,
+.arrow-icon-wrapper a {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 2px solid var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+footer > div:nth-child(2) a:hover,
+.arrow-icon-wrapper a:hover {
+  color: var(--brand);
+  border-color: var(--brand);
+  transform: translateY(-2px);
+}
+
+footer i {
+  font-size: 1.25rem;
+}
+
 .hero {
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
   border: 2px solid var(--border);
@@ -139,6 +195,7 @@ h3 {
 .category-btn {
   border: 2px solid var(--border);
   background: linear-gradient(150deg, #ffffff, #f4fbf8);
+  box-shadow: inset 0 4px 0 var(--category-accent, var(--brand));
   border-radius: 18px;
   padding: 26px;
   text-align: left;
@@ -149,6 +206,19 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.category-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--category-accent, var(--brand)) 16%, white);
+  color: var(--category-accent, var(--brand));
+  font-size: 1.5rem;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--category-accent, var(--brand)) 24%, transparent);
 }
 
 .category-btn::before {
@@ -207,7 +277,7 @@ h3 {
 
 .q-count {
   display: inline-block;
-  background: linear-gradient(135deg, var(--brand), #1bb08f);
+  background: linear-gradient(135deg, var(--category-accent, var(--brand)), #1bb08f);
   color: white;
   padding: 4px 12px;
   border-radius: 20px;
@@ -348,6 +418,68 @@ h3 {
 
 .review-mode .answer-item {
   cursor: default;
+}
+
+.feedback-area {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 16px;
+  border: 2px solid var(--border);
+  background: var(--surface-soft);
+  margin-top: 16px;
+}
+
+.feedback-area.hidden {
+  display: none;
+}
+
+.feedback-banner {
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.feedback-banner.correct {
+  background: rgba(8, 121, 95, 0.15);
+  color: #08795f;
+  border: 1px solid rgba(8, 121, 95, 0.3);
+}
+
+.feedback-banner.wrong {
+  background: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+  border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+.feedback-card {
+  padding: 14px;
+  border-radius: 12px;
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+}
+
+.feedback-card strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.feedback-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+.feedback-card ul {
+  margin: 8px 0 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 0.93rem;
 }
 
 .drag-layout {
@@ -691,6 +823,12 @@ button {
   .hero,
   .panel {
     padding: 24px;
+  }
+
+  footer {
+    width: 94vw;
+    justify-content: center;
+    text-align: center;
   }
 
   .hero h1 {

@@ -3,6 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GrammarLift helps learners master English with interactive quizzes, instant explanations, and progress-driven practice."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="GrammarLift | Interactive English Learning" />
+    <meta
+      property="og:description"
+      content="Modern English quizzes with grammar, vocabulary, collocations, antonyms, and real-time learning feedback."
+    />
+    <meta property="og:image" content="./og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="GrammarLift" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GrammarLift | Interactive English Learning" />
+    <meta
+      name="twitter:description"
+      content="Boost your English through beautiful, interactive quizzes with instant feedback and explanations."
+    />
+    <meta name="twitter:image" content="./og-image.svg" />
+
     <title>GrammarLift | English Learning Toy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -10,9 +33,15 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Space+Grotesk:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body id="top">
     <canvas id="confetti-canvas" aria-hidden="true"></canvas>
 
     <main class="app-shell">
@@ -51,15 +80,39 @@
           <h3 id="question-text"></h3>
           <p class="question-type" id="question-type"></p>
           <div id="answer-area"></div>
+          <div id="feedback-area" class="feedback-area hidden"></div>
         </article>
 
         <div class="quiz-actions">
           <button id="prev-btn" type="button" class="ghost-btn">⬅ Previous</button>
-          <button id="next-btn" type="button" class="primary-btn">Next ➡</button>
+          <button id="check-btn" type="button" class="primary-btn">Check Answer</button>
+          <button id="next-btn" type="button" class="primary-btn hidden">Next ➡</button>
           <button id="submit-btn" type="button" class="success-btn hidden">🎉 Submit Quiz</button>
         </div>
       </section>
     </main>
+
+    <footer>
+      <div>
+        <small>Copyright &copy; 2021 | Asabeneh Yetayeh</small>
+      </div>
+      <div>
+        <a href="https://github.com/Asabeneh" target="_blank"
+          ><i class="fab fa-github-square"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/asabeneh/" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://twitter.com/Asabeneh" target="_blank"
+          ><i class="fab fa-twitter-square"></i
+        ></a>
+      </div>
+      <div class="arrow-icon-wrapper">
+        <a href="#top">
+          <i class="fas fa-arrow-alt-circle-up"></i>
+        </a>
+      </div>
+    </footer>
 
     <div class="modal hidden" id="result-modal" role="dialog" aria-modal="true" aria-labelledby="result-heading">
       <div class="modal-card" id="modal-card">
