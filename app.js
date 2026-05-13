@@ -374,14 +374,14 @@ const quizData = {
     description: "Fix frequent mistakes learners make in real English.",
     icon: "🛠️",
     questions: [
-      { type: "single", question: "Which sentence is correct?", options: ["He don't like tea.", "He doesn't like tea.", "He not like tea.", "He doesn't likes tea."], answer: 1, explanation: "Use 'doesn't' + base verb for third-person singular in the present simple." },
-      { type: "single", question: "Which sentence is correct?", options: ["I am agree with you.", "I agree with you.", "I am agreeing with you always.", "I agreed with you now."], answer: 1, explanation: "'Agree' is a verb; we do not say 'I am agree'." },
+      { type: "single", question: "Choose the correct verb form for third person singular.", options: ["He don't like tea.", "He doesn't like tea.", "He not like tea.", "He doesn't likes tea."], answer: 1, explanation: "Use 'doesn't' + base verb for third-person singular in the present simple." },
+      { type: "single", question: "Which sentence uses 'agree' correctly?", options: ["I am agree with you.", "I agree with you.", "I am agreeing with you always.", "I agreed with you now."], answer: 1, explanation: "'Agree' is a verb; we do not say 'I am agree'." },
       { type: "single", question: "Choose the correct sentence.", options: ["She explained me the rule.", "She explained the rule to me.", "She explained to me it.", "She explain me the rule."], answer: 1, explanation: "With 'explain', we usually say 'explain something to someone'." },
       { type: "multiple", question: "Select all sentences that are correct.", options: ["I have lived here for five years.", "I am living here since 2020.", "She has already finished.", "They didn't went yesterday."], answer: [0, 2], explanation: "Use present perfect with 'for/since' in this context and base verb after 'didn't'." },
-      { type: "single", question: "Which sentence is correct?", options: ["There is many reasons.", "There are many reasons.", "There are much reasons.", "There is much reasons."], answer: 1, explanation: "Use 'are' with plural noun 'reasons'." },
-      { type: "single", question: "Choose the correct sentence.", options: ["I look forward to meet you.", "I look forward to meeting you.", "I look forward meet you.", "I look forward for meeting you."], answer: 1, explanation: "'Look forward to' is followed by a noun or gerund (-ing form)." },
-      { type: "single", question: "Choose the correct sentence.", options: ["Advice are useful.", "Advices are useful.", "Advice is useful.", "An advice is useful."], answer: 2, explanation: "'Advice' is uncountable in standard English and takes singular verb agreement." },
-      { type: "single", question: "Choose the correct sentence.", options: ["She is married with a doctor.", "She is married to a doctor.", "She married with a doctor.", "She is marry to a doctor."], answer: 1, explanation: "The correct pattern is 'married to someone'." },
+      { type: "single", question: "Select the correct subject-verb agreement.", options: ["There is many reasons.", "There are many reasons.", "There are much reasons.", "There is much reasons."], answer: 1, explanation: "Use 'are' with plural noun 'reasons'." },
+      { type: "single", question: "Identify the correct use of 'look forward to'.", options: ["I look forward to meet you.", "I look forward to meeting you.", "I look forward meet you.", "I look forward for meeting you."], answer: 1, explanation: "'Look forward to' is followed by a noun or gerund (-ing form)." },
+      { type: "single", question: "Which option uses 'advice' correctly?", options: ["Advice are useful.", "Advices are useful.", "Advice is useful.", "An advice is useful."], answer: 2, explanation: "'Advice' is uncountable in standard English and takes singular verb agreement." },
+      { type: "single", question: "Select the correct collocation with 'married'.", options: ["She is married with a doctor.", "She is married to a doctor.", "She married with a doctor.", "She is marry to a doctor."], answer: 1, explanation: "The correct pattern is 'married to someone'." },
     ],
   },
   sentenceCompletion: {
@@ -1023,6 +1023,8 @@ nextBtn.addEventListener("click", () => {
     if (currentQuestionIndex < currentQuestions.length - 1) {
       currentQuestionIndex += 1;
       renderQuestion();
+    } else {
+      showResults();
     }
   }
 });
