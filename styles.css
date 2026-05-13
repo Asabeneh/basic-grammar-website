@@ -724,6 +724,50 @@ button {
   display: none !important;
 }
 
+.review-all-list {
+  display: grid;
+  gap: 14px;
+}
+
+.review-card {
+  padding: 20px;
+}
+
+.review-card h3 {
+  margin-bottom: 10px;
+}
+
+.review-all-answers {
+  margin-top: 8px;
+}
+
+.drag-zone-review {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 10px 12px;
+}
+
+.explanation {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 0.94rem;
+}
+
+.review-close-wrap {
+  position: sticky;
+  bottom: 0;
+  margin-top: 16px;
+  padding-top: 12px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.95) 50%);
+}
+
+.quiz-panel.review-all-mode .progress-wrap,
+.quiz-panel.review-all-mode .quiz-actions {
+  display: none;
+}
+
 #confetti-canvas {
   position: fixed;
   inset: 0;
@@ -872,5 +916,71 @@ button {
 
   .modal-actions button {
     width: 100%;
+  }
+
+  button {
+    min-height: 44px;
+  }
+
+  .answer-item {
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-shell {
+    width: 94vw;
+    margin: 20px auto 40px;
+    gap: 16px;
+  }
+
+  .hero,
+  .panel {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .panel-title-wrap h2 {
+    font-size: 1.25rem;
+  }
+
+  .category-btn {
+    padding: 18px;
+  }
+
+  .question-card {
+    padding: 16px;
+  }
+
+  .question-card h3 {
+    font-size: 1.08rem;
+    line-height: 1.4;
+  }
+
+  .answer-item {
+    padding: 12px;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 0.92rem;
+  }
+
+  .review-card {
+    padding: 14px;
+  }
+}
+
+@media (hover: none) {
+  .category-btn:hover,
+  .answer-item:hover,
+  .primary-btn:hover,
+  .secondary-btn:hover,
+  .success-btn:hover,
+  .ghost-btn:hover {
+    transform: none;
   }
 }
